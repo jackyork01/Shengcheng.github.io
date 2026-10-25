@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>苼程股份有限公司 | 振順齒輪 - 精密齒輪與特殊螺桿加工專家</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter & Noto Sans TC -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#0B192C',
+                            900: '#030C18',
+                            700: '#1E3E62',
+                        },
+                        copper: {
+                            400: '#E29755',
+                            500: '#D67327',
+                            600: '#B85210',
+                        },
+                        steel: {
+                            100: '#F1F5F9',
+                            200: '#E2E8F0',
+                            800: '#1E293B',
+                            900: '#0F172A',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans TC', 'Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-overlay {
+            background: linear-gradient(135deg, rgba(11, 25, 44, 0.95) 0%, rgba(30, 62, 98, 0.88) 100%);
+        }
+        .copper-gradient {
+            background: linear-gradient(135deg, #E29755 0%, #B85210 100%);
+        }
+       
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-copper-500 selection:text-white">
+
+    <!-- 頂部快速聯絡資訊欄 -->
+    <header class="bg-navy-900 text-slate-300 text-xs md:text-sm py-2 px-4 border-b border-navy-700 sticky top-0 z-50 shadow-md">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center space-x-2">
+                <span class="bg-copper-500 text-white text-xs px-2 py-0.5 rounded font-bold">台中專業加工</span>
+                <span class="font-medium text-slate-200">苼程股份有限公司（振順齒輪）</span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <span class="hidden md:inline text-slate-400"><i class="fa-solid fa-clock text-copper-400 mr-1"></i> 歡迎諮詢：開發件 / 量產 / 修理急件</span>
+                <div class="flex items-center space-x-2">
+                    <a href="tel:0422121509" class="hover:text-copper-400 transition flex items-center bg-navy-800 px-2 py-1 rounded border border-navy-700">
+                        <i class="fa-solid fa-phone text-copper-400 mr-1.5"></i>04-22121509
+                    </a>
+                    <a href="tel:0422139917" class="hover:text-copper-400 transition flex items-center bg-navy-800 px-2 py-1 rounded border border-navy-700">
+                        <i class="fa-solid fa-phone text-copper-400 mr-1.5"></i>04-22139917
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主要導覽列 -->
+    <nav class="bg-navy-800 text-white border-b border-slate-700 shadow-xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-copper-400 to-copper-600 flex items-center justify-center text-white text-2xl shadow-lg border border-amber-300/30">
+                        <i class="fa-solid fa-gear fa-spin-pulse" style="--fa-animation-duration: 12s;"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-xl md:text-2xl font-extrabold tracking-wide text-white">苼程股份有限公司</h1>
+                        <p class="text-xs text-copper-400 tracking-wider font-semibold">ZHEN SHUN GEARS • 振順齒輪</p>
+                    </div>
+                </div>
+                
+                <!-- 選單連結 -->
+                <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                    <a href="#capabilities" class="hover:text-copper-400 transition">加工能力與規格</a>
+                    <a href="#catalog" class="hover:text-copper-400 transition">成品目錄</a>
+                    <a href="#estimator" class="hover:text-copper-400 transition">線上估價諮詢</a>
+                    
+                    <a href="#contact" class="bg-copper-500 hover:bg-copper-600 text-white px-4 py-2 rounded-lg font-bold shadow-md transition transform hover:-translate-y-0.5">
+                        <i class="fa-solid fa-paper-plane mr-1.5"></i>立即聯繫報價
+                    </a>
+                </div>
+
+                <!-- 行動裝置選單按鈕 -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-slate-300 hover:text-white p-2">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- 行動裝置選單 -->
+        <div id="mobile-menu" class="hidden md:hidden bg-navy-900 border-t border-slate-700 px-4 pt-2 pb-4 space-y-2">
+            <a href="#capabilities" class="block py-2 text-slate-200 hover:text-copper-400">加工能力與規格</a>
+            <a href="#catalog" class="block py-2 text-slate-200 hover:text-copper-400">成品目錄</a>
+            <a href="#estimator" class="block py-2 text-slate-200 hover:text-copper-400">線上估價諮詢</a>
+            
+            <div class="pt-2 flex flex-col gap-2">
+                <a href="tel:0422121509" class="w-full text-center bg-copper-500 text-white font-bold py-2 rounded">
+                    <i class="fa-solid fa-phone mr-2"></i>撥打電話 04-22121509
+                </a>
+                <a href="tel:0422139917" class="w-full text-center bg-navy-700 border border-slate-600 text-white font-bold py-2 rounded">
+                    <i class="fa-solid fa-phone mr-2"></i>撥打電話 04-22139917
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero 主視覺區塊 -->
+    <section class="relative bg-navy-900 text-white overflow-hidden py-16 md:py-24">
+        <!-- 背景幾何裝飾 -->
+        <div class="absolute inset-0 opacity-10 pointer-events-none">
+            <div class="absolute -top-24 -left-24 w-96 h-96 rounded-full border-8 border-slate-400"></div>
+            <div class="absolute top-1/2 right-10 w-80 h-80 rounded-full border-4 border-copper-400"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center space-x-2 bg-navy-700/80 border border-copper-500/30 px-3 py-1.5 rounded-full text-xs md:text-sm text-copper-400 font-semibold">
+                        <i class="fa-solid fa-award"></i>
+                        <span>專業精密加工 • 機械急件救星</span>
+                    </div>
+                    <h2 class="text-3xl md:text-5xl font-black leading-tight tracking-tight">
+                        精密齒輪、來回牙螺桿<br>
+                        <span class="copper-text-gradient">特殊規格與急件維修專家</span>
+                    </h2>
+                    <p class="text-slate-300 text-base md:text-lg max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+                        苼程股份有限公司（振順齒輪）專營梯形螺帽、來回牙螺桿、蝸桿蝸輪、傘齒輪及各式正斜齒輪。支援少量多樣開發、試做帶料加工及極速修理急件！
+                    </p>
+                    
+                    <!-- 服務亮點標籤 -->
+                    <div class="flex flex-wrap justify-center lg:justify-start gap-3 pt-2">
+                        <span class="bg-slate-800 border border-slate-700 px-3 py-1.5 rounded-lg text-sm font-semibold text-slate-200 flex items-center">
+                            <i class="fa-solid fa-check text-copper-400 mr-2"></i>少量多樣試做
+                        </span>
+                        <span class="bg-slate-800 border border-slate-700 px-3 py-1.5 rounded-lg text-sm font-semibold text-slate-200 flex items-center">
+                            <i class="fa-solid fa-check text-copper-400 mr-2"></i>開發件專案製作
+                        </span>
+                        <span class="bg-slate-800 border border-slate-700 px-3 py-1.5 rounded-lg text-sm font-semibold text-slate-200 flex items-center">
+                            <i class="fa-solid fa-check text-copper-400 mr-2"></i>修理急件快速排單
+                        </span>
+                    </div>
+
+                    <!-- 撥號按鈕卡片 -->
+                    <div class="pt-4 flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
+                        <a href="tel:0422121509" class="copper-gradient hover:opacity-95 text-white font-extrabold px-6 py-3.5 rounded-xl shadow-xl flex items-center justify-center space-x-3 transition transform hover:scale-105">
+                            <i class="fa-solid fa-phone-volume text-xl"></i>
+                            <span class="text-lg">專線一：04-22121509</span>
+                        </a>
+                        <a href="tel:0422139917" class="bg-navy-700 hover:bg-navy-800 text-white font-extrabold border border-slate-600 px-6 py-3.5 rounded-xl shadow-xl flex items-center justify-center space-x-3 transition transform hover:scale-105">
+                            <i class="fa-solid fa-phone-volume text-xl text-copper-400"></i>
+                            <span class="text-lg">專線二：04-22139917</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 右側特化展示面板 -->
+                <div class="lg:col-span-5">
+                    <div class="bg-navy-800/90 border border-slate-700 p-6 rounded-2xl shadow-2xl backdrop-blur-sm">
+                        <h3 class="text-xl font-bold text-white border-b border-slate-700 pb-3 mb-4 flex items-center justify-between">
+                            <span><i class="fa-solid fa-sliders text-copper-400 mr-2"></i>即時加工能量總覽</span>
+                            <span class="text-xs bg-copper-500/20 text-copper-400 border border-copper-500/40 px-2 py-0.5 rounded">實力保證</span>
+                        </h3>
+                        
+                        <div class="space-y-3 text-sm">
+                            <div class="flex justify-between items-center bg-navy-900/60 p-2.5 rounded-lg border border-slate-800">
+                                <span class="text-slate-300 font-medium">來回牙螺桿牙長</span>
+                                <span class="text-copper-400 font-bold">最大 800 mm</span>
+                            </div>
+                            <div class="flex justify-between items-center bg-navy-900/60 p-2.5 rounded-lg border border-slate-800">
+                                <span class="text-slate-300 font-medium">傘齒輪外徑範圍</span>
+                                <span class="text-copper-400 font-bold">最大 220 mm</span>
+                            </div>
+                            <div class="flex justify-between items-center bg-navy-900/60 p-2.5 rounded-lg border border-slate-800">
+                                <span class="text-slate-300 font-medium">愛克姆螺帽配合外徑</span>
+                                <span class="text-copper-400 font-bold">最大 120 mm</span>
+                            </div>
+                            <div class="flex justify-between items-center bg-navy-900/60 p-2.5 rounded-lg border border-slate-800">
+                                <span class="text-slate-300 font-medium">車床工件最大長度</span>
+                                <span class="text-copper-400 font-bold">最大 450 mm</span>
+                            </div>
+                            <div class="flex justify-between items-center bg-navy-900/60 p-2.5 rounded-lg border border-slate-800">
+                                <span class="text-slate-300 font-medium">蝸桿 / 傘齒輪模數</span>
+                                <span class="text-copper-400 font-bold">M0.5 ～ M4</span>
+                            </div>
+                        </div>
+
+                        <div class="mt-5 p-3 bg-slate-900/80 rounded-xl border border-slate-700 text-xs text-slate-400 text-center">
+                            <i class="fa-solid fa-circle-info text-copper-400 mr-1"></i> 特殊部位、四角外型工件皆可量身打造加工
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 加工能力與規格 (Capabilities Section) -->
+    <section id="capabilities" class="py-16 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-xs font-bold text-copper-600 uppercase tracking-widest mb-1">MACHINE SPECIFICATIONS</h2>
+                <h3 class="text-3xl font-extrabold text-navy-900">加工能力與詳細規格表</h3>
+                <div class="w-16 h-1 bg-copper-500 mx-auto mt-3 rounded-full"></div>
+                <p class="text-slate-600 mt-3 text-sm md:text-base">我們擁有高精度設備與經驗豐富的技師，為您提供最精準的零件加工服務</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- 卡片 1: 車床加工 -->
+                <div class="bg-white rounded-xl shadow-md border border-slate-200 overflow-hidden hover:shadow-xl transition duration-300">
+                    <div class="bg-navy-800 text-white p-4 flex items-center justify-between">
+                        <div class="flex items-center space-x-3">
+                            <i class="fa-solid fa-circle-notch text-copper-400 text-xl"></i>
+                            <h4 class="font-bold text-lg">1. 車床加工</h4>
+                        </div>
+                        <span class="text-xs bg-navy-900 px-2 py-1 rounded text-slate-300">Lathe</span>
+                    </div>
+                    <div class="p-5 space-y-3 text-slate-700 text-sm">
+                        <p class="text-copper-600 font-semibold bg-orange-50 p-2 rounded border border-orange-100">
+                            <i class="fa-solid fa-thumbs-up mr-1"></i> 少量多樣、帶料加工（歡迎試做）
+                        </p>
+                        <ul class="space-y-2 border-t border-slate-100 pt-2">
+                            <li class="flex justify-between"><span class="text-slate-500">外徑範圍：</span><span class="font-bold">10mm ～ 150mm</span></li>
+                            <li class="flex justify-between"><span class="text-slate-500">最大工件長：</span><span class="font-bold">450 mm</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 卡片 2: 蝸桿、螺桿 -->
+                <div class="bg-white rounded-xl shadow-md border border-slate-200 overflow-hidden hover:shadow-xl transition duration-300">
+                    <div class="bg-navy-800 text-white p-4 flex items-center justify-between">
+                        <div class="flex items-center space-x-3">
+                            <i class="fa-solid fa-dna text-copper-400 text-xl"></i>
+                            <h4 class="font-bold text-lg">2. 蝸桿、螺桿</h4>
+                        </div>
+                        <span class="text-xs bg-navy-900 px-2 py-1 rounded text-slate-300">Worm & Shafts</span>
+                    </div>
+                    <div class="p-5 space-y-3 text-slate-700 text-sm">
+                        <ul class="space-y-2.5">
+                            <li class="flex justify-between"><span class="text-slate-500">模數範圍：</span><span class="font-bold text-navy-800">M0.5 ～ M4</span></li>
+                            <li class="flex justify-between"><span class="text-slate-500">最大外徑：</span><span class="font-bold text-navy-800">100 mm</span></li>
+                            <li class="flex justify-between"><span class="text-slate-500">最大長度：</span><span class="font-bold text-navy-800">500 mm</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 卡片 3: 傘齒輪 -->
+                <div class="bg-white rounded-xl shadow-md border border-slate-200 overflow-hidden hover:shadow-xl transition duration-300">
+                    <div class="bg-navy-800 text-white p-4 flex items-center justify-between">
+                        <div class="flex items-center space-x-3">
+                            <i class="fa-solid fa-play rotate-90 text-copper-400 text-lg"></i>
+                            <h4 class="font-bold text-lg">3. 傘齒輪</h4>
+                        </div>
+                        <span class="text-xs bg-navy-900 px-2 py-1 rounded text-slate-300">Bevel Gears</span>
+                    </div>
+                    <div class="p-5 space-y-3 text-slate-700 text-sm">
+                        <ul class="space-y-2.5">
+                            <li class="flex justify-between"><span class="text-slate-500">模數範圍：</span><span class="font-bold text-navy-800">M0.5 ～ M4</span></li>
+                            <li class="flex justify-between"><span class="text-slate-500">最大外徑：</span><span class="font-bold text-navy-800">220 mm</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 卡片 4: 正、斜齒輪 -->
+                <div class="bg-white rounded-xl shadow-md border border-slate-200 overflow-hidden hover:shadow-xl transition duration-300">
+                    <div class="bg-navy-800 text-white p-4 flex items-center justify-between">
+                        <div class="flex items-center space-x-3">
+                            <i class="fa-solid fa-gear text-copper-400 text-xl"></i>
+                            <h4 class="font-bold text-lg">4. 正、斜齒輪</h4>
+                        </div>
+                        <span class="text-xs bg-navy-900 px-2 py-1 rounded text-slate-300">Spur & Helical</span>
+                    </div>
+                    <div class="p-5 space-y-3 text-slate-700 text-sm">
+                        <ul class="space-y-2.5">
+                            <li class="flex justify-between"><span class="text-slate-500">模數範圍：</span><span class="font-bold text-navy-800">M0.3 ～ M1.5</span></li>
+                            <li class="flex justify-between"><span class="text-slate-500">最大外徑：</span><span class="font-bold text-navy-800">110 mm</span></li>
+                            <li class="flex justify-between"><span class="text-slate-500">最大長度：</span><span class="font-bold text-navy-800">120 mm</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 卡片 5: 來回牙螺桿 / 十字牙 -->
+                <div class="bg-white rounded-xl shadow-md border border-slate-200 overflow-hidden hover:shadow-xl transition duration-300 border-l-4 border-l-copper-500">
+                    <div class="bg-navy-800 text-white p-4 flex items-center justify-between">
+                        <div class="flex items-center space-x-3">
+                            <i class="fa-solid fa-arrows-left-right text-copper-400 text-xl"></i>
+                            <h4 class="font-bold text-lg">5. 來回牙螺桿 / 十字牙</h4>
+                        </div>
+                        <span class="text-xs bg-copper-600 px-2 py-1 rounded text-white font-bold">熱門項目</span>
+                    </div>
+                    <div class="p-5 space-y-3 text-slate-700 text-sm">
+                        <ul class="space-y-2.5">
+                            <li class="flex justify-between"><span class="text-slate-500">外徑規格：</span><span class="font-bold text-navy-800">60mm 內</span></li>
+                            <li class="flex justify-between"><span class="text-slate-500">最大牙長：</span><span class="font-bold text-navy-800">800mm 內</span></li>
+                            <li class="text-xs text-copper-600 bg-amber-50 p-2 rounded"><i class="fa-solid fa-check mr-1"></i> 可支援倒角處理與特殊螺距搭配</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 卡片 6: 愛克姆螺帽 / 梯型螺牙 -->
+                <div class="bg-white rounded-xl shadow-md border border-slate-200 overflow-hidden hover:shadow-xl transition duration-300">
+                    <div class="bg-navy-800 text-white p-4 flex items-center justify-between">
+                        <div class="flex items-center space-x-3">
+                            <i class="fa-solid fa-screw-driver text-copper-400 text-xl"></i>
+                            <h4 class="font-bold text-lg">6. 愛克姆螺帽 / 梯型牙</h4>
+                        </div>
+                        <span class="text-xs bg-navy-900 px-2 py-1 rounded text-slate-300">Acme Thread</span>
+                    </div>
+                    <div class="p-5 space-y-3 text-slate-700 text-sm">
+                        <p class="text-xs bg-slate-100 p-1.5 rounded font-medium text-slate-600">支援：公制、英制規格</p>
+                        <ul class="space-y-2 border-t border-slate-100 pt-2">
+                            <li class="flex justify-between"><span class="text-slate-500">配合螺桿外徑：</span><span class="font-bold">120mm 內</span></li>
+                            <li class="flex justify-between"><span class="text-slate-500">螺帽牙長：</span><span class="font-bold">120mm 內</span></li>
+                        </ul>
+                        <p class="text-xs text-slate-500 pt-1">★ 四角外型、特殊部位與工件皆可配合加工</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 加工成品展覽目錄 (Product Gallery Section) -->
+    <section id="catalog" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-10">
+                <h2 class="text-xs font-bold text-copper-600 uppercase tracking-widest mb-1">PRODUCT CATALOG</h2>
+                <h3 class="text-3xl font-extrabold text-navy-900">加工成品展覽目錄</h3>
+                <div class="w-16 h-1 bg-copper-500 mx-auto mt-3 rounded-full"></div>
+                <p class="text-slate-600 mt-3 text-sm">點擊分類按鈕進行快速篩選，或輸入關鍵字搜尋樣品</p>
+            </div>
+
+            <!-- 分類篩選與搜尋列 -->
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 mb-8">
+                <!-- 篩選按鈕 -->
+                <div class="flex flex-wrap justify-center gap-2" id="filter-buttons">
+                    <button onclick="filterCatalog('all')" class="catalog-btn active px-4 py-2 rounded-lg text-sm font-semibold bg-navy-800 text-white shadow">全部作品</button>
+                    <button onclick="filterCatalog('acme')" class="catalog-btn px-4 py-2 rounded-lg text-sm font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200">梯形/愛克姆螺帽</button>
+                    <button onclick="filterCatalog('cross')" class="catalog-btn px-4 py-2 rounded-lg text-sm font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200">來回牙/十字牙</button>
+                    <button onclick="filterCatalog('worm')" class="catalog-btn px-4 py-2 rounded-lg text-sm font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200">蝸桿蝸輪</button>
+                    <button onclick="filterCatalog('bevel')" class="catalog-btn px-4 py-2 rounded-lg text-sm font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200">傘齒輪</button>
+                    <button onclick="filterCatalog('gears')" class="catalog-btn px-4 py-2 rounded-lg text-sm font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200">正/斜齒輪</button>
+                    <button onclick="filterCatalog('repair')" class="catalog-btn px-4 py-2 rounded-lg text-sm font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200">急件維修</button>
+                </div>
+
+                <!-- 搜尋框 -->
+                <div class="relative w-full md:w-64">
+                    <input type="text" id="search-input" onkeyup="searchCatalog()" placeholder="搜尋產品或規格..." class="w-full pl-9 pr-4 py-2 border border-slate-300 rounded-lg text-sm focus:ring-2 focus:ring-copper-500 focus:outline-none">
+                    <i class="fa-solid fa-magnifying-glass absolute left-3 top-2.5 text-slate-400"></i>
+                </div>
+            </div>
+
+            <!-- 目錄網格卡片區 (包含圖片預留位置) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="catalog-grid">
+                
+                <!-- 卡片 1 -->
+                <div class="catalog-item acme bg-slate-50 rounded-xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-lg transition">
+                    <!-- 圖片輪動容器 -->
+                    <div class="relative h-52 bg-slate-800 flex items-center justify-center text-slate-400 overflow-hidden group image-slider">
+                        <!-- 圖片 1 -->
+                        <img src="images/acme-nut.jpg" class="slider-img absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-100">
+                        <!-- 圖片 2 -->
+                        <img src="images/nut_02.jpg" class="slider-img absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0">
+
+                        <span class="absolute top-3 left-3 bg-slate-900/90 text-amber-400 text-xs px-2.5 py-1 rounded-md font-semibold z-10">梯形/愛克姆螺帽</span>
+                    </div>
+
+                    <div class="p-5">
+                        <h4 class="font-bold text-slate-900 text-lg">梯形/愛克姆螺帽</h4>
+                        <p class="text-xs text-slate-500 mt-1">Cross-Helix Double Helical Lead Screws</p>
+                        <p class="text-slate-600 text-sm mt-3">適用於排線機構、紡織機與自動化設備，具備精準導程與倒角加工。</p>
+                        <div class="mt-4 pt-3 border-t border-slate-200 flex justify-between items-center text-xs font-semibold text-slate-500">
+                            <span>外徑: 60mm內</span>
+                            <span class="text-amber-600">牙長: 800mm內</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 卡片 2 -->
+                <div class="catalog-item cross bg-slate-50 rounded-xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-lg transition">
+                    <div class="relative h-52 bg-slate-800 flex items-center justify-center text-slate-400 overflow-hidden group">
+                        <img src="images/screw.jpg" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-navy-900/90 text-copper-400 text-xs px-2.5 py-1 rounded-md font-semibold">來回牙螺桿</span>
+                    </div>
+                    <div class="p-5">
+                        <h4 class="font-bold text-slate-900 text-lg">精密十字牙 / 來回牙螺桿</h4>
+                        <p class="text-xs text-slate-500 mt-1">Cross-Helix Double Helical Lead Screws</p>
+                        <p class="text-slate-600 text-sm mt-3">適用於排線機構、紡織機與自動化設備，具備精準導程與倒角加工。</p>
+                        <div class="mt-4 pt-3 border-t border-slate-200 flex justify-between items-center text-xs font-semibold text-slate-500">
+                            <span>外徑: 60mm內</span>
+                            <span class="text-copper-600">牙長: 800mm內</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 卡片 3 -->
+                <div class="catalog-item worm bg-slate-50 rounded-xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-lg transition">
+                    <div class="relative h-52 bg-slate-800 flex items-center justify-center text-slate-400 overflow-hidden group">
+                        <img src="images/worm.jpg" class="w-full h-full object-cover">
+                       
+                        <span class="absolute top-3 left-3 bg-navy-900/90 text-copper-400 text-xs px-2.5 py-1 rounded-md font-semibold">蝸桿蝸輪</span>
+                    </div>
+                    <div class="p-5">
+                        <h4 class="font-bold text-slate-900 text-lg">高減速比 蝸桿與蝸輪組</h4>
+                        <p class="text-xs text-slate-500 mt-1">Precision Worm Gear Sets</p>
+                        <p class="text-slate-600 text-sm mt-3">低噪音、平穩運轉，適用於各種減速傳動機構與重型機械運轉需求。</p>
+                        <div class="mt-4 pt-3 border-t border-slate-200 flex justify-between items-center text-xs font-semibold text-slate-500">
+                            <span>模數: M0.5 ~ M4</span>
+                            <span class="text-copper-600">長度: 500mm內</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 卡片 4 -->
+                <div class="catalog-item bevel bg-slate-50 rounded-xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-lg transition">
+                    <div class="relative h-52 bg-slate-800 flex items-center justify-center text-slate-400 overflow-hidden group"style="height: 200px;">
+                        <img src="images/bevel-gear.jpg" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-navy-900/90 text-copper-400 text-xs px-2.5 py-1 rounded-md font-semibold">傘齒輪</span>
+                    </div>
+                    <div class="p-5">
+                        <h4 class="font-bold text-slate-900 text-lg">直齒/轉角傳動 傘齒輪</h4>
+                        <p class="text-xs text-slate-500 mt-1">Bevel Gears</p>
+                        <p class="text-slate-600 text-sm mt-3">專用於直角傳動機構，咬合精準度高，耐磨耗，符合動力傳遞需求。</p>
+                        <div class="mt-4 pt-3 border-t border-slate-200 flex justify-between items-center text-xs font-semibold text-slate-500">
+                            <span>模數: M0.5 ~ M4</span>
+                            <span class="text-copper-600">最大外徑: 220mm</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 卡片 5 -->
+                <div class="catalog-item gears bg-slate-50 rounded-xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-lg transition">
+                    <div class="relative h-52 bg-slate-800 flex items-center justify-center text-slate-400 overflow-hidden group">
+                        <img src="images/image (14).jpg" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-navy-900/90 text-copper-400 text-xs px-2.5 py-1 rounded-md font-semibold">正/斜齒輪</span>
+                    </div>
+                    <div class="p-5">
+                        <h4 class="font-bold text-slate-900 text-lg">精密正齒輪與斜齒輪</h4>
+                        <p class="text-xs text-slate-500 mt-1">Spur & Helical Gears</p>
+                        <p class="text-slate-600 text-sm mt-3">細緻模數加工，傳動順暢，適用於精密儀器、機械傳動箱。</p>
+                        <div class="mt-4 pt-3 border-t border-slate-200 flex justify-between items-center text-xs font-semibold text-slate-500">
+                            <span>模數: M0.3 ~ M1.5</span>
+                            <span class="text-copper-600">外徑: 110mm內</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 卡片 6 -->
+                <div class="catalog-item repair bg-slate-50 rounded-xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-lg transition border-l-4 border-l-red-500">
+                    <div class="relative h-52 bg-slate-800 flex items-center justify-center text-slate-400 overflow-hidden group">
+                        <div class="text-center p-4">
+                            <i class="fa-solid fa-wrench text-4xl text-copper-400 mb-2 group-hover:rotate-45 transition duration-300"></i>
+                            <p class="text-xs text-slate-400">修理急件照片區</p>
+                        </div>
+                        <span class="absolute top-3 left-3 bg-red-600 text-white text-xs px-2.5 py-1 rounded-md font-bold">急件專案</span>
+                    </div>
+                    <div class="p-5">
+                        <h4 class="font-bold text-slate-900 text-lg">舊件測繪 / 斷齒損壞修理急件</h4>
+                        <p class="text-xs text-slate-500 mt-1">Custom Part Repair & Emergency Work</p>
+                        <p class="text-slate-600 text-sm mt-3">工廠停機急救！提供現場樣品複製、舊件測繪加工與快速替換件製作。</p>
+                        <div class="mt-4 pt-3 border-t border-slate-200 flex justify-between items-center text-xs font-semibold text-red-600">
+                            <span><i class="fa-solid fa-bolt mr-1"></i>急件插單處理</span>
+                            <span>歡迎親洽 / 電話聯繫</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 線上規格評估 / 諮詢計算器 (Inquiry Builder) -->
+    <section id="estimator" class="py-16 bg-navy-900 text-white relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10">
+                <span class="bg-copper-500/20 text-copper-400 text-xs font-bold px-3 py-1 rounded-full border border-copper-500/40">快速諮詢工具</span>
+                <h3 class="text-3xl font-extrabold mt-2">加工需求規格評估</h3>
+                <p class="text-slate-400 text-sm mt-2">勾選您的加工需求，系統將為您生成簡明摘要，方便電話或 LINE 直接詢價</p>
+            </div>
+
+            <div class="bg-navy-800 border border-slate-700 rounded-2xl p-6 md:p-8 shadow-2xl">
+                <form id="inquiry-form" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- 類別選擇 -->
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-300 mb-2">1. 選擇加工項目</label>
+                            <select id="item-type" onchange="updateEstimatorSummary()" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-2.5 text-white focus:ring-2 focus:ring-copper-500 focus:outline-none">
+                                <option value="車床件加工">車床件 (少量多樣/帶料)</option>
+                                <option value="來回牙 / 十字牙螺桿">來回牙 / 十字牙螺桿</option>
+                                <option value="愛克姆螺帽 / 梯型螺牙">愛克姆螺帽 / 梯型牙</option>
+                                <option value="傘齒輪">傘齒輪</option>
+                                <option value="正齒輪 / 斜齒輪">正齒輪 / 斜齒輪</option>
+                                <option value="蝸桿蝸輪組">蝸桿 / 螺桿</option>
+                                <option value="修理急件 / 舊件測繪">修理急件 / 舊件複製</option>
+                            </select>
+                        </div>
+
+                        <!-- 數量選擇 -->
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-300 mb-2">2. 需求數量</label>
+                            <select id="item-qty" onchange="updateEstimatorSummary()" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-2.5 text-white focus:ring-2 focus:ring-copper-500 focus:outline-none">
+                                <option value="樣品開發 (1~3件)">樣品開發 (1~3件)</option>
+                                <option value="少量製作 (4~20件)">少量製作 (4~20件)</option>
+                                <option value="批量加工 (20件以上)">批量加工 (20件以上)</option>
+                                <option value="維修急件 (1件急作)">維修急件 (1件急作)</option>
+                            </select>
+                        </div>
+
+                        <!-- 外徑規格 -->
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-300 mb-2">3. 估計外徑 (mm)</label>
+                            <input type="text" id="item-diameter" oninput="updateEstimatorSummary()" placeholder="例如: 50 mm" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-2.5 text-white focus:ring-2 focus:ring-copper-500 focus:outline-none">
+                        </div>
+
+                        <!-- 長度/牙長規格 -->
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-300 mb-2">4. 估計長度/牙長 (mm)</label>
+                            <input type="text" id="item-length" oninput="updateEstimatorSummary()" placeholder="例如: 300 mm" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-2.5 text-white focus:ring-2 focus:ring-copper-500 focus:outline-none">
+                        </div>
+                    </div>
+
+                    <!-- 摘要輸出與操作 -->
+                    <div class="bg-navy-900 p-4 rounded-xl border border-slate-700 mt-4">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-xs font-bold text-copper-400">諮詢摘要 preview：</span>
+                            <button type="button" onclick="copyInquiryText()" class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 px-3 py-1 rounded border border-slate-600 transition">
+                                <i class="fa-solid fa-copy mr-1"></i>複製文字
+                            </button>
+                        </div>
+                        <p id="summary-text" class="text-slate-200 text-sm font-mono bg-slate-950 p-3 rounded border border-slate-800">
+                            【加工諮詢】項目：車床件加工 | 需求：樣品開發 (1~3件) | 外徑：未填 | 長度：未填
+                        </p>
+                    </div>
+
+                    <!-- 撥號與發送按鈕 -->
+                    <div class="flex flex-col sm:flex-row gap-4 pt-2">
+                        <a href="tel:0422121509" class="flex-1 bg-copper-500 hover:bg-copper-600 text-white font-bold py-3 rounded-xl text-center shadow-lg transition">
+                            <i class="fa-solid fa-phone mr-2"></i>以此需求撥打 04-22121509
+                        </a>
+                        <a href="tel:0422139917" class="flex-1 bg-navy-700 hover:bg-navy-600 text-white font-bold py-3 rounded-xl text-center shadow-lg border border-slate-600 transition">
+                            <i class="fa-solid fa-phone mr-2"></i>以此需求撥打 04-22139917
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- 聯絡資訊與地圖卡片 (Contact Section) -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                
+                <!-- 左側聯絡資訊 -->
+                <div class="space-y-6">
+                    <div>
+                        <span class="text-xs font-bold text-copper-600 uppercase tracking-widest">CONTACT US</span>
+                        <h3 class="text-3xl font-extrabold text-navy-900 mt-1">聯絡 苼程股份有限公司</h3>
+                        <p class="text-slate-600 mt-2">歡迎傳圖報價、來電諮詢或親洽現場討論加工細節</p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-4 p-4 bg-slate-50 rounded-xl border border-slate-200">
+                            <div class="w-10 h-10 rounded-lg bg-navy-800 text-copper-400 flex items-center justify-center text-lg font-bold shrink-0">
+                                <i class="fa-solid fa-building"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-slate-900">公司名稱</h5>
+                                <p class="text-slate-700 text-sm">苼程股份有限公司（振順齒輪）</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4 p-4 bg-slate-50 rounded-xl border border-slate-200">
+                            <div class="w-10 h-10 rounded-lg bg-navy-800 text-copper-400 flex items-center justify-center text-lg font-bold shrink-0">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h5 class="font-bold text-slate-900">聯絡電話（點擊直撥）</h5>
+                                <div class="flex flex-wrap gap-3 mt-2">
+                                    <a href="tel:0422121509" class="bg-copper-500 hover:bg-copper-600 text-white font-bold px-4 py-2 rounded-lg text-sm transition">
+                                        <i class="fa-solid fa-phone-flip mr-1"></i>04-22121509
+                                    </a>
+                                    <a href="tel:0422139917" class="bg-navy-800 hover:bg-navy-900 text-white font-bold px-4 py-2 rounded-lg text-sm transition">
+                                        <i class="fa-solid fa-phone-flip mr-1"></i>04-22139917
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4 p-4 bg-slate-50 rounded-xl border border-slate-200">
+                            <div class="w-10 h-10 rounded-lg bg-navy-800 text-copper-400 flex items-center justify-center text-lg font-bold shrink-0">
+                                <i class="fa-solid fa-gear"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-slate-900">服務項目簡述</h5>
+                                <p class="text-slate-600 text-sm">梯形螺帽、來回牙螺桿、蝸桿蝸輪、傘齒輪、正斜齒輪、急件維修、少量多樣試作。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 右側聯絡卡片 / 行動呼籲 -->
+                <div class="bg-navy-900 text-white p-8 rounded-2xl shadow-xl border border-slate-800 text-center space-y-6">
+                    <div class="w-16 h-16 bg-copper-500 rounded-full flex items-center justify-center text-3xl mx-auto shadow-lg">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold">急件維修或開發件詢價？</h4>
+                    <p class="text-slate-300 text-sm max-w-md mx-auto">
+                        我們具備完善的加工能量與豐富經驗，隨時準備協助您的機械零件加工與維修需求！
+                    </p>
+                    <div class="pt-2 space-y-3">
+                        <a href="tel:0422121509" class="block w-full copper-gradient text-white font-black py-3.5 rounded-xl text-lg shadow-lg hover:opacity-90 transition">
+                            <i class="fa-solid fa-phone mr-2"></i>立刻撥打：04-22121509
+                        </a>
+                        <a href="tel:0422139917" class="block w-full bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold py-3.5 rounded-xl border border-slate-600 transition">
+                            <i class="fa-solid fa-phone mr-2"></i>備用專線：04-22139917
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 頁尾 -->
+    <footer class="bg-navy-950 text-slate-400 py-8 border-t border-slate-800 text-xs md:text-sm">
+        <div class="max-w-7xl mx-auto px-4 text-center space-y-3">
+            <p class="font-semibold text-slate-300">苼程股份有限公司 • 振順齒輪 ZHEN SHUN GEARS</p>
+            <p>電話：04-22121509 / 04-22139917 | 服務：齒輪加工 / 來回牙螺桿 / 愛克姆螺帽 / 試做開發 / 急件維修</p>
+            <p class="text-slate-600">© 2026 苼程股份有限公司 版權所有 All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript 互動邏輯 -->
+    <script>
+        // 行動裝置選單切換
+        document.getElementById('mobile-menu-btn').addEventListener('click', function () {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // 產品目錄篩選邏輯
+        function filterCatalog(category) {
+            const items = document.querySelectorAll('.catalog-item');
+            const buttons = document.querySelectorAll('.catalog-btn');
+
+            // 更新按鈕樣式
+            buttons.forEach(btn => {
+                btn.classList.remove('active', 'bg-navy-800', 'text-white');
+                btn.classList.add('bg-slate-100', 'text-slate-700');
+            });
+            event.target.classList.add('active', 'bg-navy-800', 'text-white');
+
+            // 顯示/隱藏卡片
+            items.forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // 關鍵字搜尋目錄
+        function searchCatalog() {
+            const query = document.getElementById('search-input').value.toLowerCase();
+            const items = document.querySelectorAll('.catalog-item');
+
+            items.forEach(item => {
+                const text = item.innerText.toLowerCase();
+                if (text.includes(query)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // 即時估價摘要更新
+        function updateEstimatorSummary() {
+            const type = document.getElementById('item-type').value;
+            const qty = document.getElementById('item-qty').value;
+            const diameter = document.getElementById('item-diameter').value.trim() || '未填';
+            const length = document.getElementById('item-length').value.trim() || '未填';
+
+            const summary = `【加工諮詢】項目：${type} | 需求：${qty} | 外徑：${diameter} | 長度：${length}`;
+            document.getElementById('summary-text').innerText = summary;
+        }
+
+        // 複製諮詢摘要文字
+        function copyInquiryText() {
+            const text = document.getElementById('summary-text').innerText;
+
+            // 使用相容性複製語法
+            const tempInput = document.createElement('textarea');
+            tempInput.value = text;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+
+            alert('諮詢摘要已複製到剪貼簿！您可以直接貼到 LINE 或傳送訊息詢問。');
+        }
+
+
+       
+        // 自動輪動圖片效果
+            document.addEventListener("DOMContentLoaded", function () {
+            const sliders = document.querySelectorAll('.image-slider');
+
+            sliders.forEach(slider => {
+                const imgs = slider.querySelectorAll('.slider-img');
+            if (imgs.length < 2) return; // 如果圖片小於兩張就不執行
+
+            let currentIndex = 0;
+                setInterval(() => {
+                // 將當前圖片淡出
+                imgs[currentIndex].classList.remove('opacity-100');
+            imgs[currentIndex].classList.add('opacity-0');
+
+            // 計算下一張圖片索引
+            currentIndex = (currentIndex + 1) % imgs.length;
+
+            // 將下一張圖片淡入
+            imgs[currentIndex].classList.remove('opacity-0');
+            imgs[currentIndex].classList.add('opacity-100');
+                }, 3000); // 每 3 秒切換一次圖片（您可以自行調整毫秒數，例如 3000 是 3 秒）
+            });
+        });
+    </script>
+    
+</body>
+</html>
